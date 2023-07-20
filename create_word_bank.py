@@ -60,6 +60,3 @@ def create_word_bank(word_bank_bool, word_list_stripped):
     print(sheet_one.title)
     wb.save("Word_Bank.xlsx")
 
-
-
-
