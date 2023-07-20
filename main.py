@@ -18,4 +18,6 @@ wb_sheet = load_workbook()
 rand_word = select_random_word(wb_sheet)
 blank_spaces = get_blank_spaces(rand_word)
 
+# play the game
+
 

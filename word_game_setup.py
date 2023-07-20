@@ -9,7 +9,7 @@ import random
 
 
 def print_title_statement():
-    print("Welcome to the Word Guess Game.\n".center(20, '-'))
+    print(" Welcome to the Word Guess Game! ".center(50, '-'))
 
 
 def print_game_rules():
@@ -21,7 +21,6 @@ def print_game_rules():
 
 def load_workbook():
     wb = openpyxl.load_workbook("Word_Bank.xlsx")
-    print("Selecting word from " + str(wb) + "\n")
     sheet_one = wb.active
     return sheet_one
 
