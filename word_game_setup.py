@@ -9,14 +9,18 @@ import random
 
 
 def print_title_statement():
+    print("")
     print(" Welcome to the Word Guess Game! ".center(50, '-'))
+    print("")
 
 
 def print_game_rules():
-    print("You will have 5 attempts to guess the word.")
+    print("You will have unlimited attempts to guess the word.")
     print("Each guess is constituted by one letter")
     print("If the letter exists within the word, the letter will be revealed in the selected word.")
-    print("See if you can guess the word in 5 attempts or less!\n")
+    print("If a letter doesn't exist within the word, the user will gain a strike.")
+    print("After 5 strikes, the user will lose the game.")
+    print("Guess the word before incurring 5 strikes and you win!\n")
 
 
 def load_workbook():

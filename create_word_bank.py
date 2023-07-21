@@ -41,10 +41,8 @@ def does_word_bank_exist():
     # get the directory to check if xlsx file exists,  create new workbook if not, load if it does exist
     directory = os.listdir()
     if "Word_Bank.xlsx" in directory:
-        print("word bank exists")
         return True
     else:
-        print("no word bank found")
         return False
 
 
@@ -57,6 +55,5 @@ def create_word_bank(word_bank_bool, word_list_stripped):
     sheet_one.title = "Word Bank"
     for i in range(len(word_list_stripped)):
         sheet_one.cell(row=i + 1, column=1).value = word_list_stripped[i]
-    print(sheet_one.title)
     wb.save("Word_Bank.xlsx")
 
