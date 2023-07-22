@@ -32,10 +32,22 @@ def is_user_guess_in_word(user_guess, rand_word):
 
 
 def reveal_letter_in_word(user_guess, rand_word, blank_spaces):
-    # blank_spaces_list = blank_spaces.split()
-    # print(f'split blank spaces = {blank_spaces}')
     for i in range(len(rand_word)):
         if user_guess == rand_word[i]:
-            print("this was in the word")
             blank_spaces[i] = user_guess
     return blank_spaces
+
+
+def is_wrong_guesses_equal_0(num_guesses):
+    if num_guesses == 0:
+        return True
+    else:
+        return False
+
+
+def is_word_guessed(blank_spaces):
+    for char in blank_spaces:
+        if char == "_":
+            return False
+        else:
+            return True
