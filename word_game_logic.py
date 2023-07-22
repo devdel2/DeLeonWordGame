@@ -54,6 +54,26 @@ def is_word_guessed(blank_spaces):
 
 def print_win_or_lose(num_wrong_guesses):
     if num_wrong_guesses == 0:
-        print("You Lose!\n")
+        print("You Lose!")
     else:
-        print("You Win!\n")
+        print("You Win!")
+
+
+def play_word_game(rand_word, blank_spaces):
+    num_wrong_guesses = 5
+    print(f'This is for debugging purposes, and game testing: {rand_word}')
+    while not is_wrong_guesses_equal_0(num_wrong_guesses) and not is_word_guessed(blank_spaces):
+        blank_spaces_str = ''.join(blank_spaces)
+        print(f'Guess the word: {blank_spaces_str}')
+        user_guess = get_user_guess()
+        print(f'You guessed {user_guess}\n')
+        if is_user_guess_in_word(user_guess, rand_word):
+            reveal_letter_in_word(user_guess, rand_word, blank_spaces)
+        else:
+            num_wrong_guesses -= 1
+        print(f'You have {num_wrong_guesses} wrong guess(es) remaining.\n')
+    print_win_or_lose(num_wrong_guesses)
+
+
+def print_rand_word(rand_word):
+    print(f'The word was {rand_word}!')
