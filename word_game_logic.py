@@ -14,6 +14,11 @@ def is_user_guess_alpha(user_guess):
         return False
 
 
+def track_user_guesses(user_guess, user_guesses):
+    user_guesses.append(user_guess)
+    return user_guesses
+
+
 # will gather the users guess
 def get_user_guess():
     user_guess = input("Please enter a letter for your guess: ")
@@ -61,11 +66,14 @@ def print_win_or_lose(num_wrong_guesses):
 
 def play_word_game(rand_word, blank_spaces):
     num_wrong_guesses = 5
+    user_guesses = []
     print(f'This is for debugging purposes, and game testing: {rand_word}')
     while not is_wrong_guesses_equal_0(num_wrong_guesses) and not is_word_guessed(blank_spaces):
         blank_spaces_str = ''.join(blank_spaces)
         print(f'Guess the word: {blank_spaces_str}')
         user_guess = get_user_guess()
+        user_guesses = track_user_guesses(user_guess, user_guesses)
+        print(f'you have guessed {user_guesses} so far')
         print(f'You guessed {user_guess}\n')
         if is_user_guess_in_word(user_guess, rand_word):
             reveal_letter_in_word(user_guess, rand_word, blank_spaces)
