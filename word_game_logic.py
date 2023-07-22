@@ -72,6 +72,9 @@ def play_word_game(rand_word, blank_spaces):
         blank_spaces_str = ''.join(blank_spaces)
         print(f'Guess the word: {blank_spaces_str}')
         user_guess = get_user_guess()
+        while user_guess in user_guesses:
+            print(f'\nYou have already guessed {user_guess}.\nThis will not count as a strike.\nPlease try again.\n')
+            user_guess = get_user_guess()
         user_guesses = track_user_guesses(user_guess, user_guesses)
         print(f'you have guessed {user_guesses} so far')
         print(f'You guessed {user_guess}\n')
