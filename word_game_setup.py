@@ -32,7 +32,7 @@ def load_workbook():
 def select_random_word(wb_sheet):
     rand_index = random.randint(1, 1000)
     rand_word = wb_sheet.cell(row=rand_index, column=1).value
-    return rand_word
+    return rand_word.upper()
 
 
 def get_blank_spaces(rand_word):
@@ -41,4 +41,3 @@ def get_blank_spaces(rand_word):
     for i in range(1, word_length+1, 1):
         blank_spaces += '_'
     return blank_spaces
-

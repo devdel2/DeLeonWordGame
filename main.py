@@ -1,5 +1,6 @@
 from create_word_bank import *
 from word_game_setup import *
+from word_game_logic import *
 
 # get request from the website and create a word list
 request = get_request_from_web()
@@ -19,5 +20,6 @@ rand_word = select_random_word(wb_sheet)
 blank_spaces = get_blank_spaces(rand_word)
 
 # play the game
-
-
+user_guess = get_user_guess()
+print(f'You guessed {user_guess}')
+is_user_guess_in_word(user_guess, rand_word)
