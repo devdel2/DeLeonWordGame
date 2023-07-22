@@ -49,5 +49,11 @@ def is_word_guessed(blank_spaces):
     for char in blank_spaces:
         if char == "_":
             return False
-        else:
-            return True
+    return True
+
+
+def print_win_or_lose(num_wrong_guesses):
+    if num_wrong_guesses == 0:
+        print("You Lose!\n")
+    else:
+        print("You Win!\n")

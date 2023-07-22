@@ -31,5 +31,6 @@ while not is_wrong_guesses_equal_0(num_wrong_guesses) and not is_word_guessed(bl
         reveal_letter_in_word(user_guess, rand_word, blank_spaces)
     else:
         num_wrong_guesses -= 1
-        print(f'You have {num_wrong_guesses} wrong guesses remaining.')
+    print(f'You have {num_wrong_guesses} wrong guess(es) remaining.')
+print_win_or_lose(num_wrong_guesses)
 print(f'The word was {rand_word}!')
