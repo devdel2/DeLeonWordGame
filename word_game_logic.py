@@ -26,8 +26,16 @@ def get_user_guess():
 # this will check if the user guess is in the chosen word
 def is_user_guess_in_word(user_guess, rand_word):
     if user_guess in rand_word:
-        print(f'you guessed {user_guess} and it IS in {rand_word}')
         return True
     else:
-        print(f'{user_guess} is not in the word.')
         return False
+
+
+def reveal_letter_in_word(user_guess, rand_word, blank_spaces):
+    # blank_spaces_list = blank_spaces.split()
+    # print(f'split blank spaces = {blank_spaces}')
+    for i in range(len(rand_word)):
+        if user_guess == rand_word[i]:
+            print("this was in the word")
+            blank_spaces[i] = user_guess
+    return blank_spaces

@@ -39,5 +39,5 @@ def get_blank_spaces(rand_word):
     word_length = int(len(rand_word))
     blank_spaces = ''
     for i in range(1, word_length+1, 1):
-        blank_spaces += '_'
-    return blank_spaces
+        blank_spaces += '_ '
+    return blank_spaces.split()
