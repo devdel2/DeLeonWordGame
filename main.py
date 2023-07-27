@@ -21,4 +21,3 @@ blank_spaces = get_blank_spaces(rand_word)
 
 # play the game - handles the game loop until win or lose condition
 play_word_game(rand_word, blank_spaces)
-print_rand_word(rand_word)

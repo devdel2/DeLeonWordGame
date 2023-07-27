@@ -43,6 +43,10 @@ def reveal_letter_in_word(user_guess, rand_word, blank_spaces):
     return blank_spaces
 
 
+def join_blank_spaces(blank_spaces):
+    return ' '.join(blank_spaces)
+
+
 def is_wrong_guesses_equal_0(num_guesses):
     if num_guesses == 0:
         return True
@@ -64,13 +68,16 @@ def print_win_or_lose(num_wrong_guesses):
         print("You Win!")
 
 
+def print_rand_word(rand_word):
+    print(f'The word was {rand_word}!')
+
+
 # REFACTOR THIS!
 def play_word_game(rand_word, blank_spaces):
     num_wrong_guesses = 5
     user_guesses = []
-    # print(f'This is for debugging purposes, and game testing: {rand_word}')
     while not is_wrong_guesses_equal_0(num_wrong_guesses) and not is_word_guessed(blank_spaces):
-        blank_spaces_str = ' '.join(blank_spaces)
+        blank_spaces_str = join_blank_spaces(blank_spaces)
         print(f'Guess the word: {blank_spaces_str}')
         user_guess = get_user_guess()
         while user_guess in user_guesses:
@@ -85,7 +92,5 @@ def play_word_game(rand_word, blank_spaces):
             num_wrong_guesses -= 1
         print(f'You have {num_wrong_guesses} wrong guess(es) remaining.\n')
     print_win_or_lose(num_wrong_guesses)
+    print_rand_word(rand_word)
 
-
-def print_rand_word(rand_word):
-    print(f'The word was {rand_word}!')
