@@ -56,4 +56,3 @@ def create_word_bank(word_bank_bool, word_list_stripped):
     for i in range(len(word_list_stripped)):
         sheet_one.cell(row=i + 1, column=1).value = word_list_stripped[i]
     wb.save("Word_Bank.xlsx")
-

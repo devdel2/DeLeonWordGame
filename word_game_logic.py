@@ -90,5 +90,5 @@ def play_word_game(rand_word, blank_spaces):
         else:
             num_wrong_guesses -= 1
         print(f'You have {num_wrong_guesses} wrong guess(es) remaining.\n')
-    print_win_or_lose(num_wrong_guesses)
     print_rand_word(rand_word)
+    print_win_or_lose(num_wrong_guesses)
