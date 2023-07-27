@@ -64,12 +64,13 @@ def print_win_or_lose(num_wrong_guesses):
         print("You Win!")
 
 
+# REFACTOR THIS!
 def play_word_game(rand_word, blank_spaces):
     num_wrong_guesses = 5
     user_guesses = []
-    print(f'This is for debugging purposes, and game testing: {rand_word}')
+    # print(f'This is for debugging purposes, and game testing: {rand_word}')
     while not is_wrong_guesses_equal_0(num_wrong_guesses) and not is_word_guessed(blank_spaces):
-        blank_spaces_str = ''.join(blank_spaces)
+        blank_spaces_str = ' '.join(blank_spaces)
         print(f'Guess the word: {blank_spaces_str}')
         user_guess = get_user_guess()
         while user_guess in user_guesses:
