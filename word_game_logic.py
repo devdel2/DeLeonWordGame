@@ -72,7 +72,6 @@ def print_rand_word(rand_word):
     print(f'The word was {rand_word}!')
 
 
-# REFACTOR THIS!
 def play_word_game(rand_word, blank_spaces):
     num_wrong_guesses = 5
     user_guesses = []
